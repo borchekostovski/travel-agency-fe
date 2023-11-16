@@ -4,7 +4,6 @@
     <div class="ml-12 mt-8 cursor-pointer" @click="handleLogoClick">
       <img src="../assets/images/logo.svg" width="236" height="75" alt="Logo" />
     </div>
-
     <!-- Search bar -->
     <SearchBar @search="handleSearch" @setDestination="setDestination" />
 
@@ -21,12 +20,18 @@
   <hr class="my-2 border-1 border-gray-300" />
 
   <!-- Filters (Apartment, House...) -->
-  <Filters />
+  <Filters :filters="props.filters" />
   <hr class="mt-3 border-1 border-gray-300" />
 </template>
 
 <script setup lang="ts">
 import { mapStore } from '~/stores/store';
+
+const props = defineProps({
+  filters: {
+    type: Object,
+  },
+});
 
 const emit = defineEmits(['search', 'setDestination']);
 const store = mapStore();

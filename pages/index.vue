@@ -1,6 +1,10 @@
 <template>
   <div class="font-montserrat tracking-tight">
-    <Header @search="searchDestinations" @setDestination="searchByID" />
+    <Header
+      :filters="filters"
+      @search="searchDestinations"
+      @setDestination="searchByID"
+    />
     <template v-if="loading">
       <Spinner />
     </template>
@@ -12,6 +16,7 @@
 
 <script setup lang="ts">
 import {
+  allContentTypesQ,
   destByTitle_NumPeopleQ,
   destByType_Title_NumPeopleQ,
   destByIDQ,
@@ -28,6 +33,28 @@ type DestinationsResults = {
   };
 };
 
+type ContentTypesFilters = {
+  types: {
+    data: {
+      id: 0;
+      attributes: {
+        name: '';
+        thumbnail: {
+          data: {
+            attributes: {
+              url: '';
+              width: 0;
+              height: 0;
+              alternativeText: '';
+            };
+          };
+        };
+      };
+    }[];
+  };
+};
+
+let filters = ref();
 const destinations = ref<DestinationsResults | null>(null);
 const loading = ref(false);
 
@@ -82,6 +109,9 @@ watch(
 );
 
 onNuxtReady(async () => {
+  const { data } = await useAsyncQuery<ContentTypesFilters>(allContentTypesQ);
+  filters = data;
+
   performSearch();
 });
 </script>

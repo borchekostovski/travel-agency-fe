@@ -1,8 +1,9 @@
 <template>
   <div class="flex justify-left items-left">
     <div class="flex ml-14">
+      <!-- {{ filters?.types?.data }} -->
       <div
-        v-for="type in data.types.data"
+        v-for="type in filters?.types?.data"
         :key="type.id"
         class="mr-6 p-4"
         @click="handleItemClick(type)"
@@ -35,32 +36,15 @@
 </template>
 
 <script setup lang="ts">
-import { allContentTypesQ } from '~/graphql/queries';
 import { getImageUrl } from '~/services/utils';
 import { mapStore } from '~/stores/store';
 
-type ContentTypesResults = {
-  types: {
-    data: {
-      id: 0;
-      attributes: {
-        name: '';
-        thumbnail: {
-          data: {
-            attributes: {
-              url: '';
-              width: 0;
-              height: 0;
-              alternativeText: '';
-            };
-          };
-        };
-      };
-    }[];
-  };
-};
+const props = defineProps({
+  filters: {
+    type: Object,
+  },
+});
 
-const { data } = await useAsyncQuery<ContentTypesResults>(allContentTypesQ);
 const {
   public: { apiBaseUrl },
 } = useRuntimeConfig();
