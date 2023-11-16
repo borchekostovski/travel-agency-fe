@@ -1,5 +1,13 @@
 # Nuxt 3 Minimal Starter
 
+
+Before running the project you need to create .env file with 
+```
+API_BASE_URL: 'http://localhost:1337'
+HTTP_ENDPOINT_GRAPQL: 'http://localhost:1337/graphql'
+```
+
+
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
@@ -72,4 +80,6 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+

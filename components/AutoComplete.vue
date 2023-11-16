@@ -1,16 +1,18 @@
 <template>
   <div
-    class="relative flex flex-col justify-center items-start border-r pr-12 pl-8 border-gray-300"
+    class="relative flex flex-col justify-center items-start md:border-r lg:pr-12 lg:pl-8 md:pl-2 border-gray-300"
     ref="autocompleteRef"
   >
-    <label class="text-black font-extrabold text-15">Where</label>
-    <input
-      type="text"
-      placeholder="Search destination"
-      class="outline-none bg-transparent text-12 font-medium"
-      v-model="where"
-      @input="onInputWhere"
-    />
+    <div class="md:flex flex-col justify-center">
+      <label class="text-black font-extrabold text-15">Where</label>
+      <input
+        type="text"
+        placeholder="Search destination"
+        class="outline-none bg-transparent text-12 font-medium"
+        v-model="where"
+        @input="onInputWhere"
+      />
+    </div>
 
     <div
       v-if="showSuggestions"

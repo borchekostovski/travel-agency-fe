@@ -13,14 +13,14 @@ export default defineNuxtConfig({
   apollo: {
     clients: {
       default: {
-        httpEndpoint: 'http://localhost:1337/graphql',
+        httpEndpoint: process.env.HTTP_ENDPOINT_GRAPQL || '',
       },
     },
   },
 
   runtimeConfig: {
     public: {
-      apiBaseUrl: 'http://localhost:1337',
+      apiBaseUrl: process.env.API_BASE_URL,
     },
   },
 

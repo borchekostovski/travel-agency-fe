@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20 flex justify-center items-center text-left relative"
+    class="w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/5 mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20 flex justify-center items-center text-left relative overflow-hidden"
   >
     <div class="flex flex-col max-w-[270px] relative">
       <img
@@ -11,25 +11,25 @@
           )
         "
         alt="Destination image"
-        class="m-auto"
         width="270"
         height="260"
+        class="m-auto"
       />
-
-
-      
-
-      <!-- Tag Badge -->
       <div
         v-if="destination.attributes.tag.data"
         class="absolute top-2 right-2"
       >
+        <p class="text-white"></p>
         <UBadge
           class="uppercase rounded-full mt-3 mr-2 px-5 py-1.5 text-xs sm:text-sm font-semibold bg-78CA77"
         >
           <p class="text-white text-xs">
             {{ destination.attributes.tag.data.attributes.name }}
           </p>
+          <!-- <UIcon
+            name="i-heroicons-star-solid"
+            class="text-white text-lg mx-1 sm:mx-2"
+          /> -->
           <img
             :src="
               getImageUrl(
@@ -44,8 +44,6 @@
           />
         </UBadge>
       </div>
-
-      <!-- Destination Details -->
       <div>
         <h2 class="text-base font-semibold mx-4 mt-5">
           {{ destination.attributes.title }}

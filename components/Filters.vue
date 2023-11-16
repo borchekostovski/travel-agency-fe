@@ -1,7 +1,6 @@
 <template>
   <div class="flex justify-left items-left">
-    <div class="flex ml-14">
-      <!-- {{ filters?.types?.data }} -->
+    <div class="flex md:ml-14">
       <div
         v-for="type in filters?.types?.data"
         :key="type.id"
