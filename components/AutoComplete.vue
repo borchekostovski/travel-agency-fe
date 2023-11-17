@@ -1,14 +1,14 @@
 <template>
   <div
-    class="relative flex flex-col justify-center items-start md:border-r lg:pr-12 lg:pl-8 md:pl-2 border-gray-300"
+    class="relative flex flex-col justify-center items-start lg:border-r lg:pr-12 lg:pl-8 md:pl-2 border-gray-300"
     ref="autocompleteRef"
   >
-    <div class="md:flex flex-col justify-center">
+    <div class="lg:flex flex-col justify-center">
       <label class="text-black font-extrabold text-15">Where</label>
       <input
         type="text"
         placeholder="Search destination"
-        class="outline-none bg-transparent text-12 font-medium md:pl-0 pl-2"
+        class="outline-none bg-transparent text-12 font-medium lg:pl-0 pl-2"
         v-model="where"
         @input="onInputWhere"
       />

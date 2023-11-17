@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex flex-col md:flex-row justify-between items-center md:p-4 p-2"
+    class="flex flex-col md:flex-row justify-between items-center lg:p-4 p-2"
   >
     <!-- Logo -->
     <div
-      class="md:ml-12 ml-2 md:mt-8 mt-2 cursor-pointer"
+      class="lg:ml-12 ml-2 lg:mt-8 mt-2 cursor-pointer"
       @click="handleLogoClick"
     >
       <img
@@ -18,7 +18,7 @@
     <SearchBar @search="handleSearch" @setDestination="setDestination" />
 
     <!-- Nav bar and login -->
-    <div class="md:ml-auto ml-4 md:mr-8 mr-2 md:mt-12 mt-6 pr-1">
+    <div class="lg:ml-auto ml-4 lg:mr-8 mr-2 lg:mt-12 mt-6 pr-1">
       <img
         src="../assets/images/userMenuBtn.svg"
         class="w-20 md:w-22 lg:w-24 xl:w-26"
