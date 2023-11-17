@@ -49,9 +49,6 @@ export const destByTitle_NumPeopleQ = gql`
             data {
               attributes {
                 url
-                width
-                height
-                alternativeText
               }
             }
           }
@@ -64,9 +61,6 @@ export const destByTitle_NumPeopleQ = gql`
                   data {
                     attributes {
                       url
-                      width
-                      height
-                      alternativeText
                     }
                   }
                 }
@@ -112,9 +106,6 @@ export const destByType_Title_NumPeopleQ = gql`
             data {
               attributes {
                 url
-                width
-                height
-                alternativeText
               }
             }
           }
@@ -127,9 +118,6 @@ export const destByType_Title_NumPeopleQ = gql`
                   data {
                     attributes {
                       url
-                      width
-                      height
-                      alternativeText
                     }
                   }
                 }
@@ -165,9 +153,6 @@ export const destByIDQ = gql`
             data {
               attributes {
                 url
-                width
-                height
-                alternativeText
               }
             }
           }
@@ -180,9 +165,6 @@ export const destByIDQ = gql`
                   data {
                     attributes {
                       url
-                      width
-                      height
-                      alternativeText
                     }
                   }
                 }

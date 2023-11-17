@@ -1,7 +1,12 @@
 <template>
-  <div class="flex flex-col md:flex-row justify-between items-center p-4">
+  <div
+    class="flex flex-col md:flex-row justify-between items-center md:p-4 p-2"
+  >
     <!-- Logo -->
-    <div class="md:ml-12 mt-8 cursor-pointer" @click="handleLogoClick">
+    <div
+      class="md:ml-12 ml-2 md:mt-8 mt-2 cursor-pointer"
+      @click="handleLogoClick"
+    >
       <img
         src="../assets/images/logo.svg"
         class="w-48 md:w-48 lg:w-60 xl:w-60"
@@ -13,7 +18,7 @@
     <SearchBar @search="handleSearch" @setDestination="setDestination" />
 
     <!-- Nav bar and login -->
-    <div class="md:ml-auto md:mr-8 mt-12 pr-1">
+    <div class="md:ml-auto ml-4 md:mr-8 mr-2 md:mt-12 mt-6 pr-1">
       <img
         src="../assets/images/userMenuBtn.svg"
         class="w-20 md:w-22 lg:w-24 xl:w-26"

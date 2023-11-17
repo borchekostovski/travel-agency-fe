@@ -17,7 +17,7 @@
             "
             :width="type.attributes.thumbnail.data.attributes.width"
             :height="type.attributes.thumbnail.data.attributes.height"
-            :alt="type.attributes.thumbnail.data.attributes.alternativeText"
+            alt="type.attributes.thumbnail.data.attributes.alternativeText"
             class="object-cover m-auto"
           />
 

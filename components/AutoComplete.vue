@@ -8,7 +8,7 @@
       <input
         type="text"
         placeholder="Search destination"
-        class="outline-none bg-transparent text-12 font-medium"
+        class="outline-none bg-transparent text-12 font-medium md:pl-0 pl-2"
         v-model="where"
         @input="onInputWhere"
       />
@@ -34,9 +34,7 @@
                   apiBaseUrl
                 )
               "
-              :alt="
-                destination.attributes.image.data[0].attributes.alternativeText
-              "
+              alt="Destination image"
               class="w-12 h-12 object-cover rounded-lg"
             />
             <!-- Title -->

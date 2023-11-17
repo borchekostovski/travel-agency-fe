@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto mt-11">
     <div
-      class="flex flex-col md:flex-row border rounded-full 2xl:p-2 xl:p-2 lg:p-2 md:p-2 p-6 border-gray-300"
+      class="flex flex-col md:flex-row border md:rounded-full rounded-3xl 2xl:p-2 xl:p-2 lg:p-2 md:p-2 p-6 border-gray-300"
     >
       <!-- First input field with label and placeholder -->
       <AutoComplete @onSelect="setDestination" />
@@ -14,7 +14,7 @@
         <input
           type="text"
           placeholder="Add a date"
-          class="outline-none bg-transparent text-12 font-medium"
+          class="outline-none bg-transparent text-12 font-medium md:pl-0 pl-2"
           v-model="when"
           @input="onInputWhen"
         />
@@ -28,7 +28,7 @@
         <input
           type="text"
           placeholder="Add number of guests"
-          class="outline-none bg-transparent text-12 sm:text-sm font-medium"
+          class="outline-none bg-transparent text-12 sm:text-sm font-medium md:pl-0 pl-2"
           v-model.number="who"
           @keypress="handleKeyPress"
           @input="onInputWho"
@@ -36,7 +36,7 @@
       </div>
 
       <button
-        class="rounded-full lg:p-3 md:p-2 lg:mr-1 text-lg bg-FF7171 flex items-center justify-center"
+        class="rounded-full md:mt-0 mt-2 lg:p-3 md:p-2 lg:mr-1 text-lg bg-FF7171 flex items-center justify-center"
         @click="handleSearch"
       >
         <UIcon
